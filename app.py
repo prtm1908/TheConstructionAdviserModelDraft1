@@ -59,9 +59,6 @@ def inference(alpaca_prompt, model, tokenizer, instruction, context):
     response_index = outputs[0].find("### Response:")
     response = outputs[0][response_index + len("### Response:"):].strip()
 
-    print(instruction)
-    print(context)
-    print(response)
     return response
 
 
